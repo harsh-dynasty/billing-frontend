@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>View Vouchers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="eCommerce HTML Template Free Download" name="keywords" />
+    <meta content="eCommerce HTML Template Free Download" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/slick/slick.css" rel="stylesheet" />
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <style>
+    #date-section label {
+      margin-right: 10px;
+      align-self: center;
+    }
+  </style>
+  <body>
+    <!-- Top bar Start -->
+
+    <!-- Top bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav" id="navigation-bar"></div>
+    <!-- Nav Bar End -->
+
+    <!-- Bottom Bar Start -->
+    <div class="bottom-bar" id="lower-header"></div>
+    <!-- Bottom Bar End -->
+
+    <!-- Breadcrumb Start -->
+
+    <!-- Breadcrumb End -->
+
+    <!-- Checkout Start -->
+    <div class="checkout">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="checkout-inner">
+              <div class="billing-address">
+                <h2>View Vouchers</h2>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="datefilter"
+                      />
+                      <label class="custom-control-label" for="datefilter"
+                        >Filter by date</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="date-section" style="display: flex">
+                  <div class="col-md-6" style="display: flex">
+                    <label>From</label>
+                    <input
+                      class="form-control"
+                      type="date"
+                      id="from"
+                      value="2021-01-01"
+                    />
+                  </div>
+                  <div class="col-md-6" style="display: flex">
+                    <label>To</label>
+                    <input
+                      class="form-control"
+                      type="date"
+                      id="to"
+                      value="2023-01-01"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>Customer Name</label>
+                    <input class="form-control" id="customerName" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="table-responsive" id="table-res">
+                    <table class="table table-bordered">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Date</th>
+                          <th scope="col">Customer name</th>
+                          <th scope="col">Total items</th>
+                          <th scope="col">Total weight</th>
+
+                          <th scope="col">Total Amount</th>
+                          <th scope="col">View</th>
+                        </tr>
+                      </thead>
+                      <tbody class="align-middle" id="vouchers-table">
+                        <!-- <tr>
+                          <td>1</td>
+                          <td>24-11-2020</td>
+                          <td>xyz enterprises</td>
+                          <td>10</td>
+                          <td>25000</td>
+                          <td>25000</td>
+                          <td>
+                            <a class="btn" href="/open-report"
+                              ><i class="fa fa-search"></i
+                            ></a>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>1</td>
+                          <td>24-11-2020</td>
+                          <td>xyz enterprises</td>
+                          <td>10</td>
+                          <td>25000</td>
+                          <td>25000</td>
+                          <td>
+                            <a class="btn" href=""
+                              ><i class="fa fa-search"></i
+                            ></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>24-11-2020</td>
+                          <td>xyz enterprises</td>
+                          <td>10</td>
+                          <td>25000</td>
+                          <td>25000</td>
+                          <td>
+                            <a class="btn" href=""
+                              ><i class="fa fa-search"></i
+                            ></a>
+                          </td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Checkout End -->
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+
+    <!-- Footer Bottom Start -->
+
+    <!-- Footer Bottom End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/viewVouchers.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

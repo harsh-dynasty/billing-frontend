@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Create a voucher</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="eCommerce HTML Template Free Download" name="keywords" />
+    <meta content="eCommerce HTML Template Free Download" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/slick/slick.css" rel="stylesheet" />
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Top bar Start -->
+
+    <!-- Top bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav" id="navigation-bar"></div>
+    <!-- Nav Bar End -->
+
+    <!-- Bottom Bar Start -->
+    <!-- <div class="bottom-bar" id="lower-header"></div> -->
+    <!-- Bottom Bar End -->
+
+    <!-- Breadcrumb Start -->
+
+    <!-- Breadcrumb End -->
+
+    <!-- Checkout Start -->
+    <div class="checkout">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="checkout-inner">
+              <div class="billing-address">
+                <h2>Create a new Voucher</h2>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Customer Name</label>
+                    <input class="form-control" id="customerName" />
+                  </div>
+                  <div class="col-md-6">
+                    <label>Address</label>
+                    <input
+                      class="form-control"
+                      placeholder="Enter Address here"
+                      id="address"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label>Contact No.</label>
+                    <input class="form-control" id="contactNo" maxlength="10" />
+                  </div>
+                  <div class="col-md-6">
+                    <label>Date</label>
+
+                    <input class="form-control" type="date" id="date" />
+                  </div>
+
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Item Desc.</th>
+                          <th scope="col">Hsn Code</th>
+                          <th scope="col">Purity</th>
+                          <th scope="col">Pcs.</th>
+                          <th scope="col">Net Wt.</th>
+                          <th scope="col">Rate</th>
+                          <th scope="col">Making Charges</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Remove</th>
+                        </tr>
+                      </thead>
+                      <tbody class="align-middle" id="items-table">
+                        <tr id="add-form">
+                          <td>
+                            <input
+                              class="form-control"
+                              id="item-desc"
+                              placeholder="Item Desc."
+                            />
+                          </td>
+                          <td>
+                            <select class="custom-select" id="hsn">
+                              <option selected>Gold</option>
+                              <option>Silver</option>
+                            </select>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              id="purity"
+                              placeholder="Purity"
+                              type="Number"
+                              min="15"
+                              max="24"
+                            />
+                          </td>
+                          <td>
+                            <div class="qty">
+                              <button class="btn-minus">
+                                <i class="fa fa-minus"></i>
+                              </button>
+                              <input
+                                type="number"
+                                value="0"
+                                id="quantity"
+                                min="0"
+                                max=""
+                              />
+                              <button class="btn-plus">
+                                <i class="fa fa-plus"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              id="net-wt"
+                              placeholder="Net Wt."
+                              type="Number"
+                              min="15"
+                              max="24"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="number"
+                              min="0"
+                              placeholder="Rate"
+                              id="rate"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="number"
+                              min="0"
+                              id="making-charges"
+                              placeholder="Making Charges"
+                            />
+                          </td>
+
+                          <td colspan="2">
+                            <button
+                              type="button"
+                              id="add-item-btn"
+                              class="btn btn-default"
+                            >
+                              Add
+                            </button>
+                          </td>
+                        </tr>
+                        <tr id="hallmark-form">
+                          <th  scope="row" colspan="3">Hallmark Charges</td>
+
+                          <td>
+                            <div class="qty">
+                              <button class="btn-minus">
+                                <i class="fa fa-minus"></i>
+                              </button>
+                              <input
+                                type="number"
+                                value="0"
+                                id="hallmark-pcs"
+                                min="0"
+                                max=""
+                              />
+                              <button class="btn-plus">
+                                <i class="fa fa-plus"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td>
+                            <input
+                              class="form-control"
+                              type="number"
+                              min="0"
+                              placeholder="Rate"
+                              id="hallmark-rate"
+                            />
+                          </td>
+                          <td></td>
+
+                          <td colspan="2">
+                            <button
+                              type="button"
+                              id="add-hallmark-btn"
+                              class="btn btn-default"
+                            >
+                              Add
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-bordered">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">HSN/SAC.</th>
+                          <th scope="col">Taxable Value</th>
+                          <th scope="col">CGST</th>
+                          <th scope="col">SGST</th>
+                          <th scope="col">Total Amount (with Taxes)</th>
+                        </tr>
+                      </thead>
+                      <tbody class="align-middle" >
+                        <tr>
+                          <th scope="row">Hallmark</th>
+                          <td id="hallmark-total"> 0</td>
+                          <td id="hallmark-sgst">(9.00%) 0</td>
+                          <td id="hallmark-cgst">(9.00%) 0</td>
+                          <td id="hallmark-final">0</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Jewellery</th>
+                          <td id="item-total"> 0</td>
+                          <td id="item-sgst">(1.50%) 0</td>
+                          <td id="item-cgst">(1.50%) 0</td>
+                          <td id="item-final"> 0</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Grand Total</th>
+                          <td id="amt-wo-taxes">0</td>
+                          <td id="sgst">0</td>
+                          <td id="cgst">0</td>
+                          <td id="total-amt">0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <button
+                              type="button"
+                              id="submit-btn"
+                              class="btn btn-default"
+                            >
+                              Submit
+                            </button>
+            </div>
+            
+          </div>
+          <!-- <div class="col-lg-4">
+            <div class="checkout-inner">
+              <div class="checkout-summary">
+                <h1>Billing Total</h1>
+                <p>Total Quantity<span id="total-quantity">0</span></p>
+
+                <h2>Grand Total <span id="grand-total">$0</span></h2>
+              </div>
+
+              <div class="checkout-payment">
+                <div class="payment-methods">
+                  <h1>Payment Methods</h1>
+                  <div class="payment-method">
+                    <div class="custom-control custom-radio">
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="payment-1"
+                        name="payment"
+                        value="Net Banking"
+                      />
+                      <label class="custom-control-label" for="payment-1"
+                        >Net-Banking</label
+                      >
+                    </div>
+                  </div>
+                  <div class="payment-method">
+                    <div class="custom-control custom-radio">
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="payment-2"
+                        name="payment"
+                        value="UPI"
+                      />
+                      <label class="custom-control-label" for="payment-2"
+                        >UPI</label
+                      >
+                    </div>
+                  </div>
+                  <div class="payment-method">
+                    <div class="custom-control custom-radio">
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="payment-3"
+                        name="payment"
+                        value="Cheque"
+                      />
+                      <label class="custom-control-label" for="payment-3"
+                        >Cheque Payment</label
+                      >
+                    </div>
+                  </div>
+                  <div class="payment-method">
+                    <div class="custom-control custom-radio">
+                      <input
+                        type="radio"
+                        class="custom-control-input"
+                        id="payment-4"
+                        name="payment"
+                        value="Cash"
+                      />
+                      <label class="custom-control-label" for="payment-4"
+                        >Cash</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-btn">
+                  <button id="">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Checkout End -->
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+
+    <!-- Footer Bottom Start -->
+
+    <!-- Footer Bottom End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/voucher.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

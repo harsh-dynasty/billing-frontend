@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Report</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="eCommerce HTML Template Free Download" name="keywords" />
+    <meta content="eCommerce HTML Template Free Download" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/slick/slick.css" rel="stylesheet" />
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Top bar Start -->
+    <!-- Top bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="nav" id="navigation-bar"></div>
+    <!-- Nav Bar End -->
+
+    <!-- Bottom Bar Start -->
+    <!-- <div class="bottom-bar" id="lower-header"></div> -->
+    <!-- Bottom Bar End -->
+
+    <!-- Breadcrumb Start -->
+
+    <!-- Breadcrumb End -->
+
+    <!-- Checkout Start -->
+    <div class="checkout">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="checkout-inner">
+              <div class="billing-address">
+                <h2>Voucher Details</h2>
+                <div class="row info">
+                  <div class="col-md-4">
+                    <h4>Customer Name</h4>
+                    <p id="customerName">Vinod Sharma</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Address</h4>
+                    <p id="address">
+                      29, kendriya vidhalaya orad, block 23, Bhopal, Madhya
+                      Pradesh
+                    </p>
+                  </div>
+                </div>
+                <div class="row info">
+                  <div class="col-md-4">
+                    <h4>Contact No.</h4>
+                    <p id="contactno">87876546546</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Date</h4>
+                    <p id="voucher-date">24-11-2020</p>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item Desc.</th>
+                        <th scope="col">Hsn Code</th>
+                        <th scope="col">Purity</th>
+                        <th scope="col">Pcs.</th>
+                        <th scope="col">Net Wt.</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Making Charges</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align-middle" id="items-table">
+                      <!-- <tr>
+                        <th scope="row">1</th>
+                        <td>item1</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>5000</td>
+                        <td>25000</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>item1</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>5000</td>
+                        <td>25000</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>item1</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>5000</td>
+                        <td>25000</td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+                  <table class="table table-bordered">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">HSN/SAC.</th>
+                        <th scope="col">Taxable Value</th>
+                        <th scope="col">CGST</th>
+                        <th scope="col">SGST</th>
+                        <th scope="col">Total Amount (with Taxes)</th>
+                      </tr>
+                    </thead>
+                    <tbody class="align-middle" id="items-table">
+                      <tr>
+                        <th scope="row">Hallmark</th>
+                        <td id="hallmark-total"></td>
+                        <td id="hallmark-sgst">(9.00%)</td>
+                        <td id="hallmark-cgst">(9.00%)</td>
+                        <td id="hallmark-final"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Jewellery</th>
+                        <td id="item-total"></td>
+                        <td id="item-sgst">(1.50%)</td>
+                        <td id="item-cgst">(1.50%)</td>
+                        <td id="item-final"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Grand Total</th>
+                        <td id="amt-wo-taxes"></td>
+                        <td id="sgst"></td>
+                        <td id="cgst"></td>
+                        <td id="total-amt"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-lg-3">
+            <div class="checkout-inner">
+              <div class="checkout-summary">
+                <h1>Billing Total</h1>
+
+                <p>Total Items<span id="total-items">0</span></p>
+                <p>Total Weight<span id="total-weight">0</span></p>
+                <p>Amt. w/o Taxes<span id="amt-wo-taxes">0</span></p>
+                <p>SGST<span id="sgst">0</span></p>
+                <p>CGST<span id="cgst">0</span></p>
+
+                <h2>Total Amt. <span id="total-amt">0</span></h2>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Checkout End -->
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+
+    <!-- Footer Bottom Start -->
+    <!-- Footer Bottom End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/open-report.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
